@@ -20,6 +20,24 @@ int main() {
     // TODO: Create matrices to demonstrate use of ALL
     //       methods in ArrayMatrix class.
     try {
+        ArrayMatrix<int> A(2,2,1);
+        A[0][0]= 1;
+        A[1][1] = 2;
+        std::cout << A.rows() << "\n";
+        std::cout << A.cols() << "\n";
+        A.print();
+        ArrayMatrix<int> B = A;
+        ArrayMatrix<int> C(2,2);
+        C = A;
+        ArrayMatrix<int> D(2,2,2);
+        
+        ArrayMatrix<int> E = A + D;
+        ArrayMatrix<int> F(2,2,3);
+        ArrayMatrix<int> G = A * F;
+        std::cout << B;
+        std::cout << C;
+        std::cout << E;
+        std::cout << G;
 
 
 
@@ -33,11 +51,12 @@ int main() {
 
     // Prompt user input using standard stream extraction (cin)
     std::cout << "Enter 6 integer values for a 2x3 matrix (separated by spaces or newlines):\n";
-    // TODO: cin statement
+    std::cin >> matl
 
     // Output the matrix formatting cleanly via custom insertion stream
     std::cout << "\nYou entered the following matrix:\n";
     // TODO: cout statement
+    std::cout << mat;
 
     return 0;
 }
